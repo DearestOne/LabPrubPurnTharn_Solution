@@ -1,16 +1,14 @@
 #include<stdio.h>
 #include<math.h>
 void main(){
-    int ac,bc;
-    scanf("%d %d",&ac,&bc);
-    int ab = sqrt((bc * bc) - (ac * ac));
-    if(ac > ab){
-        printf("B");
-    }
-    else if(ac < ab){
-        printf("C");
+    double ac,bc;
+    scanf("%lf %lf",&ac,&bc);
+    
+    double ab = sqrt((bc * bc) - (ac * ac));
+    if(ab < ac){
+        printf("B\n%.2lf",ab);
     }
     else{
-        printf("B or C");
+        printf("C\n%.2lf",ac);
     }
 }
